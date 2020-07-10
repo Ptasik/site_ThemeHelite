@@ -1,4 +1,4 @@
-body{
+body {
     color: #ccc;
     font-size: .85rem;
     font-family: "Roboto", "Helvetica Neue", "Helvetica", "Arial", "Verdana", sans-serif;
@@ -7,57 +7,56 @@ body{
 
 }
 
-a{
+a {
     text-decoration: none;
     color: #ccc;
 }
 
-header{
+header {
     min-height: 60px;
     width: 100%;
     background-color: rgba(45, 48, 55, 1);
     display: flex;
+    justify-content: space-between;
     align-items: center;
     position: fixed;
     font-weight: bold;
     z-index: 2;
 }
 
+.header-log {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
 .logo {
     margin: 0 27px;
 }
 
-.dropdown{
+.dropdown {
     border-right: 1px solid #414450;
     border-left: 1px solid #414450;
     margin-right: 22px;
     padding: 0 25px;
 }
 
-.dropdown a{
-    text-transform: uppercase;
-}
-
-.dropdown a:hover{
-    color: #00c8aa;
-}
-
-.produced{
+.produced {
     display: flex;
     align-items: center;
 }
 
-.produced img{
+.produced img {
     margin-right: 15px;
 }
 
-.between{
+.between {
     display: flex;
     justify-content: space-between;
-    width: 67%;
+    width: 90%;
 }
 
-.basket{
+.basket {
     background-color: #00c8aa;
     height: 100%;
     padding: 15px 50px;
@@ -65,12 +64,12 @@ header{
     align-items: center;
 }
 
-.basket img{
+.basket img {
     width: 30px;
     padding-right: 5px;
 }
 
-.basket a{
+.basket a {
     text-transform: uppercase;
     color: white;
     display: flex;
@@ -81,9 +80,9 @@ header{
     background-color: #008d74;
 }
 
-.pure{
+.pure {
     background: url("../image/header_bg.jpg") no-repeat;
-    background-size: 100% 100% ;
+    background-size: 100% 100%;
     min-height: 400px;
     padding: 60px 0 100px;
     display: flex;
@@ -91,27 +90,24 @@ header{
     justify-content: center;
     font-family: 'Quicksand', sans-serif;
     color: white;
-
-
 }
 
-.pure h1{
+.pure h1 {
     font-size: 4rem;
     padding-bottom: 45px;
 }
 
-.pure h2{
+.pure h2 {
     font-size: 2rem;
     padding-bottom: 45px;
-
 }
 
-.pure p{
+.pure p {
     font-style: italic;
     font-size: 1.25rem;
 }
 
-.experience{
+.experience {
     min-height: 20px;
     background-color: #2d3037;
     font-size: 1.15rem;
@@ -119,52 +115,51 @@ header{
     padding: 20px 0;
 }
 
-.text{
+.text {
     padding: 125px 0;
     align-items: center;
 }
 
-.text p{
+.text p {
     color: #666;
     margin-top: 25px;
 }
 
-.text h1{
+.text h1 {
     color: #999;
     text-transform: uppercase;
     font-size: 2rem;
 }
 
-.cards-desk{
+.cards-desk {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
 }
 
-.card{
+.card {
     padding: 0 20px 60px;
     box-sizing: border-box;
     width: 40%;
 }
 
-.card a{
+.card a {
     color: #333;
     text-transform: uppercase;
     font-size: 1rem;
 }
 
-.card img{
+.card img {
     margin-bottom: 25px;
     width: 100%;
-
 }
 
-.card img:hover{
+.card img:hover {
     background-color: rgba(255, 255, 255, 1);
     opacity: 0.8;
 }
 
-footer{
+footer {
     background-color: #2d3037;
     padding: 60px 0;
     color: #777777;
@@ -173,84 +168,89 @@ footer{
     margin-top: 100px;
 }
 
-.footer-text{
+.footer-text {
     display: flex;
     justify-content: center;
     padding-top: 15px;
-
 }
 
-.footer-text a{
+.footer-text a {
     color: white;
     margin: 0 5px;
 }
 
-.footer-text a:hover{
+.footer-text a:hover {
     color: #00c8aa;
 }
 
-@media (max-width: 900px){
-    .produced{
+.mobil-basket {
+    display: none;
+    background-color: #00c8aa;
+    width: 20%;
+    height: 60px;
+}
+
+.mobil-basket img {
+    width: 50px;
+    margin: auto;
+}
+
+@media (max-width: 900px) {
+    .produced {
         display: none;
     }
 
-    .logo, .dropdown, .between{
-        width: 33%;
+    .between {
+        width: 30%;
     }
 
-    .basket{
+    .basket {
         width: 100%;
     }
-
 }
 
 @media (max-width: 768px) {
-    .card{
+    .card {
         width: 45%;
     }
 
-    .pure{
+    .pure {
         display: none;
     }
 
-    .basket a{
-        display: flex;
-        align-items: center;
-        box-sizing: border-box;
-        margin: 0 auto;
+    .basket {
+        display: none;
     }
 
-    .text{
-        padding: 50px 0;
-    }
-}
-
-@media (max-width: 700px) {
-    .between{
-        width: 100%;
+    .text {
+        padding: 100px 0 50px;
     }
 
-    .basket{
-        height: 100%;
+    .mobil-basket {
+        display: block;
     }
 
-    .text{
-        padding-top: 100px;
-    }
-
-    .text h1{
+    .text h1 {
         font-size: 1.5rem;
 
     }
 
-    .logo, .dropdown, .experience{
+    .between {
         display: none;
     }
-    .card{
+
+    .experience {
+        display: none;
+    }
+}
+
+@media (max-width: 700px) {
+
+    .card {
         width: 100%;
     }
 
-    footer{
+    footer {
         margin-top: 0;
     }
 }
